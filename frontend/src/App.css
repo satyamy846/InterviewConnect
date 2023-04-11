@@ -1,0 +1,446 @@
+/* color code 
+    --primary-100:#424874;
+    --primary-200:#A6B1E1;
+    --primary-300:#fdf6fd;
+    --accent-100:#D9ACF5;
+    --accent-200:#FFCEFE;
+    --text-100:#292524;
+    --text-200:#64748b;
+    --bg-100:#F4EEFF;
+    --bg-200:#DCD6F7;
+    --bg-300:#bbb9e9;
+    <<<<<<<<<<<<<<<<<<<<<<<
+    >>>>>>>>>>>>>>>>>>>>>>>>
+      
+*/
+
+/* <<<<<<<<<<<<<<<<<<<<<<< navbar css start >>>>>>>>>>>>>>>>>>>>>>>>  */
+.bg-color {
+  background-color: #A6B1E1;
+  color: white;
+}
+.nav-btn{
+  background-color: #424874;
+  color: white;
+}
+.nav-element{
+  /* color: #292524; */
+  color: white;
+}
+/*<<<<<<<<<<<<<<<<<<<<< navbar css end  >>>>>>>>>>>>>>>>>>>>>>>>*/
+
+
+
+/* <<<<<<<<<<<<<<<<<<<<< top page css start >>>>>>>>>>>>>>>>>>>>>>>>*/
+.wave{
+  background-image: url('../public/img/wave.png');
+  height: 130px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 20px;
+}
+.wave2{
+  background-image: url('../public/img/wave2.png');
+  height: 130px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* margin-bottom: -40px; */
+}
+.topPageCont{
+  /* border: 2px solid red; */
+  height: 600px;
+}
+.topBox1{
+  /* border: 2px solid black;  */
+  padding: 0 60px 0 100px;
+}
+/* .topBox2{
+  border: 2px solid black;
+} */
+.topBoxText{
+  /* border: 2px solid green; */
+  /* height: 270px; */
+  width: 500px;
+}
+.topBoxImg{
+  /* border: 2px solid blue; */
+  height: 600px;
+  width: 700px;
+  background-image: url('../public/img/topimg1.png');
+}
+#heading{
+  text-align: center;
+  font-size: 30px;
+  color: #424874;
+  font-family: 'Archivo Black';
+  font-weight: 800;
+}
+#content{
+  text-align: center;
+  font-family: 'Cagliostro';
+}
+#getstartedBtn{
+  display: flex;
+  justify-content: center;
+}
+#getButton {
+  border-radius: .25rem;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 400;
+  padding-left: 25px;
+  padding-right: 25px;
+  margin-top: 20px;
+  color: #fff;
+  -webkit-clip-path: polygon(0 0,0 0,100% 0,100% 0,100% calc(100% - 15px),calc(100% - 15px) 100%,15px 100%,0 100%);
+  clip-path: polygon(0 0,0 0,100% 0,100% 0,100% calc(100% - 15px),calc(100% - 15px) 100%,15px 100%,0 100%);
+  height: 40px;
+  font-size: 13px;
+  line-height: 14px;
+  letter-spacing: 1.2px;
+  transition: .2s .1s;
+  background-image: linear-gradient(90deg,#292524,#bbb9e9);
+  border: 0 solid;
+  overflow: hidden;
+}
+
+#getButton:hover {
+  cursor: pointer;
+  transition: all .3s ease-in;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+/* code for horizontal line started */
+        
+.divider {								/* minor cosmetics */
+  display: table; 
+  font-size: 24px; 
+  text-align: center; 
+  width: 95%; 
+}
+
+.divider span { display: table-cell; position: relative; }
+.divider span:first-child, .divider span:last-child {
+  width: 50%;
+  top: 19px;							/* adjust vertical align */
+  -moz-background-size: 100% 2px; 	/* line width */
+  background-size: 100% 2px; 			/* line width */
+  background-position: 0 0, 0 100%;
+  background-repeat: no-repeat;
+  
+}
+.divider span:first-child {				/* color changes in here */
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), to(#000));
+  background-image: -webkit-linear-gradient(180deg, transparent, #000);
+  background-image: -moz-linear-gradient(180deg, transparent, #000);
+  background-image: -o-linear-gradient(180deg, transparent, #000);
+  background-image: linear-gradient(90deg, transparent, #000);
+}
+.divider span:nth-child(2) {
+  color: #000;
+  padding: 0px 5px;
+  width: auto; 
+  white-space: nowrap;
+  color: red;
+  font-style: italic;
+}
+.divider span:last-child {				/* color changes in here */
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#000), to(transparent));
+  background-image: -webkit-linear-gradient(180deg, #000, transparent);
+  background-image: -moz-linear-gradient(180deg, #000, transparent);
+  background-image: -o-linear-gradient(180deg, #000, transparent);
+  background-image: linear-gradient(90deg, #000, transparent);
+}
+/* code for horizontal line end */
+
+.colorBox{
+  height: 100px;
+  background-color: #A6B1E1;
+  margin-top: -10px;
+}
+
+/* info box css start */
+.topBox2{
+  /* border: 2px solid red; */
+  margin-top: -60px;
+ 
+}
+.infoBox {
+  height: 100px;
+  width: 200px;
+  border: 2px solid white;
+  background-color: #424874;
+  margin-bottom: 20px;
+  border-radius: 15px;
+}
+
+.circle {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-color: #FFCEFE;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  padding: 10px;
+  font-size: 20px;
+  /* position: absolute; */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+}
+
+.infotext {
+ font-size: 26px;
+ text-align: center;
+ margin-top: -60px;
+ color: white;
+}
+
+
+/* info box css end */
+
+
+
+/* For large screens, display the child divs inline */
+@media screen and (min-width: 768px) {
+  .topBox1 ,.topBox2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .topBox2{
+    justify-content: space-around;
+
+  }
+}
+
+/* For small screens, display the child divs vertically */
+@media screen and (max-width: 767px) {
+  .topBox1 , .topBox2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+/* top page css end  >>>>>>>>>>>>>>>>>>>>>>>>*/
+
+
+
+
+/* <<<<<<<<<<<<<<<<<<<<< login page css start >>>>>>>>>>>>>>>>>>>>>>>> */
+
+/* * * * * General CSS * * * * */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1140px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  display: flex;
+  background: #ffffff;
+  box-shadow: 0 0 5px #999999;
+}
+
+.credit {
+  position: relative;
+  margin: 25px auto 0 auto;
+  width: 100%;
+  text-align: center;
+  color: #666666;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.credit a {
+  color: #222222;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.col-left,
+.col-right {
+  padding: 30px;
+  display: flex;
+}
+
+.col-left {
+  width: 60%;
+  -webkit-clip-path: polygon(0 0, 0% 100%, 100% 0);
+  clip-path: polygon(0 0, 0% 100%, 100% 0);
+  /* background: #44c7f5; */
+  background: #A6B1E1;
+}
+
+.col-right {
+  padding: 60px 30px;
+  width: 50%;
+  margin-left: -10%;
+}
+
+@media(max-width: 575.98px) {
+  .container {
+    flex-direction: column;
+    box-shadow: none;
+  }
+
+  .col-left,
+  .col-right {
+    width: 100%;
+    margin: 0;
+    -webkit-clip-path: none;
+    clip-path: none;
+  }
+
+  .col-right {
+    padding: 30px;
+  }
+}
+
+.login-text {
+  position: relative;
+  width: 100%;
+  color: #ffffff;
+}
+
+.login-text h2 {
+  margin: 0 0 15px 0;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.login-text p {
+  margin: 0 0 20px 0;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.login-text .btn {
+  display: inline-block;
+  padding: 7px 20px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  border-radius: 30px;
+  color: #ffffff;
+  outline: none;
+  border: 1px solid #ffffff;
+  box-shadow: inset 0 0 0 0 #ffffff;
+  transition: .3s;
+  -webkit-transition: .3s;
+}
+
+.login-text .btn:hover {
+  /* color: #44c7f5; */
+  color: #A6B1E1;
+  box-shadow: inset 150px 0 0 0 #ffffff;
+}
+
+.login-form {
+  position: relative;
+  width: 100%;
+}
+
+.login-form h2 {
+  margin: 0 0 15px 0;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.login-form p {
+  margin: 0 0 10px 0;
+  text-align: left;
+  color: #666666;
+  font-size: 15px;
+}
+
+.login-form p:last-child {
+  margin: 0;
+  padding-top: 3px;
+}
+
+.login-form p a {
+  /* color: #44c7f5; */
+  color: #A6B1E1;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.login-form label {
+  display: block;
+  width: 100%;
+  margin-bottom: 2px;
+  letter-spacing: .5px;
+}
+
+.login-form p:last-child label {
+  width: 60%;
+  float: left;
+}
+
+.login-form label span {
+  color: #ff574e;
+  padding-left: 2px;
+}
+
+.login-form input {
+  display: block;
+  width: 100%;
+  height: 35px;
+  padding: 0 10px;
+  outline: none;
+  border: 1px solid #cccccc;
+  border-radius: 30px;
+}
+
+.login-form input:focus {
+  border-color: #ff574e;
+}
+
+.login-form button,
+.login-form input[type=submit] {
+  display: inline-block;
+  width: 100%;
+  margin-top: 5px;
+  /* color: #44c7f5; */
+  color: #A6B1E1;
+  font-size: 16px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  background: transparent;
+  /* border: 1px solid #44c7f5; */
+  border: 1px solid #A6B1E1;
+  border-radius: 30px;
+  /* box-shadow: inset 0 0 0 0 #44c7f5; */
+  box-shadow: inset 0 0 0 0 #A6B1E1;
+  transition: .3s;
+  -webkit-transition: .3s;
+}
+
+.login-form button:hover,
+.login-form input[type=submit]:hover {
+  color: #ffffff;
+  /* box-shadow: inset 250px 0 0 0 #44c7f5; */
+  box-shadow: inset 250px 0 0 0 #A6B1E1;
+}
+
+/* <<<<<<<<<<<<<<<<<<<<< login page css end  >>>>>>>>>>>>>>>>>>>>>>>>*/
