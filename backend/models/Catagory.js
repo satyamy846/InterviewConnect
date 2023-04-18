@@ -5,14 +5,18 @@ const collection = new mongoose.Schema({
         type:String,
         required:true
     },
-    question:{
+    title:[{
         type: mongoose.Schema.Types.ObjectId,
-        ref:'question'
-    }
+        ref:'title'
+    }],
+    questions:[{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'question'
+    }]
 
 })
 
 const catagorymodel = mongoose.model('catagory',collection);
 
 
-module.exports = usermodel;
+module.exports = catagorymodel;

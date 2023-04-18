@@ -1,4 +1,4 @@
-const usermodel = require('../models/user');
+const adminmodel = require('../models/Admin');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const SECRET_KEY = 'ABSCCSD';
@@ -9,14 +9,14 @@ const userController = {
             const {name,email,password} = req.body;
             try{
                 //check if it is existing user or not
-                const existinguser = await usermodel.findOne({email:email});
+                const existinguser = await adminmodel.findOne({email:email});
                 if(existinguser){
                     return res.status(400).json({message:'User Already Exists'}).send(`User already exists`);
                 }
                 //encrypt the password
                 const hashpassword = await bcrypt.hash(password,10);
 
-                const result = await usermodel.create({
+                const result = await adminmodel.create({
                     name:name,
                     email:email,
                     password:hashpassword
@@ -38,7 +38,7 @@ const userController = {
             const {email,password} = req.body;
             try{
                 //find the existing user
-                const userDetails = await usermodel.findOne({email:email});
+                const userDetails = await adminmodel.findOne({email:email});
                 //compare the encrypted password with the requested password
                 const matchedpassword = bcrypt.compare(password,userDetails.password);
                 //invalid credential

@@ -1,10 +1,6 @@
 const mongoose = require('mongoose');
 
 const collection = new mongoose.Schema({
-    tag:{
-        type:String,
-        required:true
-    },
     qname:{
         type:String,
     },
@@ -14,17 +10,13 @@ const collection = new mongoose.Schema({
     photo:{
         type:String
     },
-    admin:{
-        type: mongoose.Schema.Types.ObjectId,
-        ref:'admin'
-    },
-    user:{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'user',
-    },
     catagory:{
         type: mongoose.Schema.Types.ObjectId,
         ref: 'catagory',
+    },
+    title:{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'title'
     }
 })
 

@@ -1,25 +1,24 @@
 const mongoose = require('mongoose');
 
 const collection = new mongoose.Schema({
-    content:{
+    tagname:{
         type:String,
         required:true
     },
-    user:{
-        type: mongoose.Schema.Types.ObjectId,
-        ref:'user'
+    level:{
+        type: String,
     },
-    question:{
+    questions:[{
         type: mongoose.Schema.Types.ObjectId,
         ref:'question'
-    },
-    catagory:{
+    }],
+    catagory:[{
         type: mongoose.Schema.Types.ObjectId,
         ref:'catagory'
-    }
-})
+    }]
+});
 
-const commentmodel = mongoose.model('comment',collection);
+const titlemodel = mongoose.model('title',collection);
 
 
-module.exports = commentmodel;
+module.exports = titlemodel;
