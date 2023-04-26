@@ -1,0 +1,51 @@
+.reviewPageCont{
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: center;
+}
+.reviewHeading{
+    margin-top: 100px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 38px;
+    font-weight: 400;
+    font-family: 'Belgrano';
+}
+.reviewBox{
+    /* background-image: url('../../public/img/review2jpg.jpg'); */
+    background-image: url('../../public/img/review2.png');
+    border: 1px solid black;
+    height: 430px;
+    width: 850px;
+    border-radius: 20px;
+    background-color: #424874;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contentBox{
+    height: 240px;
+    width: 600px;
+    /* border: 2px solid red; */
+}
+
+
+#carouselExampleAutoplaying{
+    /* border: 2px solid white; */
+    height: 240px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textBox{
+    height: 180px;
+    /* border: 2px solid red; */
+    width: 450px;
+    padding: 20px;
+    margin: auto;
+}
+#reviewText,#personName{
+    text-align: center;
+}
