@@ -4,12 +4,7 @@ const titleController = {
     async posttitle(req, res) {
 
         try {
-            const data = await titlemodel.create({
-                tagname: req.body.tagname,
-                level: req.body.level,
-                questions: req.questions._id,
-                catagory: req.catagory._id,
-            });
+            const data = await titlemodel.create(req.body);
             // add one flash message also
             res.status(201).json({ message: "title successfully posted", data: data });
 
@@ -18,9 +13,10 @@ const titleController = {
             console.log(err);
         }
     },
-    async gettitle(req, res) {
+    async gettitleBycatagory(req, res) {
+        const cname = req.query.cname;
         try {
-            const data = await titlemodel.find({});
+            const data = await titlemodel.find({cname:cname});
             res.status(201).json({ data: data });
         }
         catch (err) {
@@ -31,12 +27,9 @@ const titleController = {
         const id = req.params.id;
         try {
             const newrecord = {
-                tag: req.body.tag,
-                qname: req.body.qname,
-                answer: req.body.answer,
-                photo: req.body.photo,
+                tagname:req.body.tagname
             }
-            const data = await titlemodel.findByIdAndUpdate({ _id: id }, newrecord);
+            const data = await titlemodel.findByIdAndUpdate({ _id: id }, newrecord,{new:true});
             res.status(201).json({ data: data });
         }
         catch (err) {

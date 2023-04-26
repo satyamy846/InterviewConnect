@@ -4,23 +4,19 @@ const catagoryController = {
     async postcatagory(req,res){
         
         try{
-                const data = await catagorymodel.create({
-                    name:req.body.name,
-                    title: req.body.title._id, //add title schema ID
-                    questions: req.body.questions._id // add question schema ID
-                });
+                const data = await catagorymodel.create(req.body);
                 // console.log(data.title, data.questions);
                 res.status(201).json({message:"catagory successfully posted",data:data});
 
         }
         catch(err){
-            console.log(err);
+            console.log(err.message);
         }
     },
-    async getcatagory(req,res){
-        const name = req.query.name;
+    async getAllcatagory(req,res){
+        // const name = req.query.name;
         try{
-                const data = await catagorymodel.find({name:name}).populate('title');
+                const data = await catagorymodel.find({});
                 res.status(201).json({data:data});
         }
         catch(err){
@@ -31,12 +27,9 @@ const catagoryController = {
         const id = req.params.id;
         try{
                 const newrecord = {
-                    tag:req.body.tag,
-                    qname: req.body.qname,
-                    answer: req.body.answer,
-                    photo: req.body.photo,
+                    cname:req.body.cname
                 }
-                const data = await catagorymodel.findByIdAndUpdate(id,newrecord);
+                const data = await catagorymodel.findByIdAndUpdate(id,newrecord,{new:true});
                 res.status(201).json({data:data});
         }
         catch(err){
@@ -46,8 +39,8 @@ const catagoryController = {
     async deletecatagory(req,res){
         const id = req.params.id;
         try{
-                await catagorymodel.findByIdAndRemove(id);
-                res.status(201).json({message:"record is deleted"});
+                const record = await catagorymodel.findByIdAndRemove(id);
+                res.status(201).json({message:"record is deleted",record:record});
         }
         catch(err){
             console.log(err);

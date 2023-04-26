@@ -6,6 +6,8 @@ const dotenv = require('dotenv');
 const userRouter = require('./routes/userRouter');
 const feedbackRouter = require('./routes/feedbackRotuer');
 const catagoryRouter = require('./routes/catagoryRouter');
+const titleRouter =  require('./routes/titleRouter');
+const questionRouter = require('./routes/questionRouter');
 dotenv.config();
 
 app.use(bodyParser.urlencoded({extended:false}));
@@ -14,6 +16,8 @@ app.use(express.json());
 app.use(userRouter);
 app.use(feedbackRouter);
 app.use(catagoryRouter);
+app.use(titleRouter);
+app.use(questionRouter);
 
 
 const port = 3000;

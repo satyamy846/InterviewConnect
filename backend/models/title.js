@@ -5,20 +5,14 @@ const collection = new mongoose.Schema({
         type:String,
         required:true
     },
-    level:{
-        type: String,
-    },
-    questions:[{
-        type: mongoose.Schema.Types.ObjectId,
-        ref:'question'
-    }],
-    catagory:[{
-        type: mongoose.Schema.Types.ObjectId,
-        ref:'catagory'
-    }]
+    cname:{
+        type:String,
+        required:true
+    }
 });
 
 const titlemodel = mongoose.model('title',collection);
+
 
 
 module.exports = titlemodel;

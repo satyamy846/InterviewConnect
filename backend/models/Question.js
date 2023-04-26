@@ -10,15 +10,19 @@ const collection = new mongoose.Schema({
     photo:{
         type:String
     },
-    catagory:{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'catagory',
+    cname:{
+        type: String,
+        required:true,
     },
-    title:{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'title'
+    tagname:{
+        type: String,
+        required:true,
+    },
+    level:{
+        type:String,
+        required:true
     }
-})
+});
 
 const questionmodel = mongoose.model('question',collection);
 

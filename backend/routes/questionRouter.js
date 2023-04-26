@@ -3,8 +3,8 @@ const express = require('express');
 const router = express.Router();
 
 
-router.post('/question',questionController.postquestion);
-router.get('/get-question',questionController.getquestion);
+router.post('/add-question',questionController.postquestion);
+router.get('/get-questions',questionController.getquestionByTagName);
 router.put('/update-question/:id',questionController.updatequestion);
 router.delete('/delete-question/:id',questionController.deletequestion);
 

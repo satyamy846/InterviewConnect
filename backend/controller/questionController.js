@@ -1,42 +1,38 @@
 const questionmodel = require('../models/Question');
+const CustomError = require('../utils/errorHandler');
 
 const questionController = {
-    async postquestion(req,res){
-        
+    async postquestion(req,res,next){
         try{
-            const data = await questionmodel.create({
-                qname:req.body.qname,
-                photo:req.body.photo,
-                answer:req.body.answer,
-                title: req.title._id,
-                catagory: req.catagory._id,
-            });
+            const data = await questionmodel.create(req.body);
             res.status(201).json({message:"Question successfully posted",data:data});
 
         }
         catch(err){
-            console.log(err);
+            console.log(err)
+            next(new CustomError(err.message, 500, "Unable to add Question"));
         }
     },
-    async getquestion(req,res){
+    async getquestionByTagName(req,res,next){
+        const tagname = req.query.tagname;
         try{
-                const data = await questionmodel.find({});
+                const data = await questionmodel.find({tagname:tagname});
                 res.status(201).json({data:data});
         }
         catch(err){
-            console.log(err);
+            next(new CustomError(err.message, 401,"Unable to fetch questions"))
         }
     },
     async updatequestion(req,res){
         const id = req.params.id;
         try{
                 const newrecord = {
-                    tag:req.body.tag,
-                    qname: req.body.qname,
+                    qname:req.body.qname,
                     answer: req.body.answer,
                     photo: req.body.photo,
+                    level:req.body.level,
                 }
-                const data = await questionmodel.findByIdAndUpdate(id,newrecord);
+                const data = await questionmodel.findByIdAndUpdate(id,newrecord,{new:true});
                 res.status(201).json({data:data});
         }
         catch(err){
