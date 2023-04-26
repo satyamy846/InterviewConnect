@@ -1,5 +1,11 @@
 
 import './App.css';
+import './QuesContPage.css'
+import './Css files/ReviewPage.css'
+import './Css files/loginAndSignupPage.css'
+import './Css files/NavbarPage.css'
+import './Css files/BeautifulPage.css'
+import './Css files/footerPage.css'
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import HomeMain from './Components/HomeMain';
 import LoginPage from './Components/LoginPage';
@@ -24,6 +30,7 @@ function App() {
             <Route path="login" element={<LoginPage/>} />
             <Route path="signup" element={<SignupPage/>} />
           </Route>
+          
         </Routes>
       </BrowserRouter>
     </div>
