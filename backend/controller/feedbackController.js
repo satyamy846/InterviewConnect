@@ -4,8 +4,11 @@ const feedbackController = {
     async postFeedback(req,res){
         try{
 
-            const result = await feedbackmodel.create(req.body);
-            res.status(201).json({comment:result});
+            const result = await feedbackmodel.create({
+                comment:req.body.comment,
+                user:req.params.id,
+            });
+            res.status(201).json({feedback:result});
         }
         catch(err){
             console.log(err);
@@ -15,7 +18,7 @@ const feedbackController = {
         try{
 
             const result = await feedbackmodel.find({});
-            res.status(201).json({comment:result});
+            res.status(201).json({feedback:result});
         }
         catch(err){
             console.log(err);

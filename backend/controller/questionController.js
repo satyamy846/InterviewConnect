@@ -1,15 +1,36 @@
 const questionmodel = require('../models/Question');
 const CustomError = require('../utils/errorHandler');
-
+const fs = require('fs');
 const questionController = {
     async postquestion(req,res,next){
         try{
-            const data = await questionmodel.create(req.body);
-            res.status(201).json({message:"Question successfully posted",data:data});
+            let uploadPhoto ="";
+            // if(!){
+            //     res.status(404).send("File upload failed");
+            // }
+            if(req.file){
+                // Convert the image to a Base64 encoded string
+                const base64 = await fs.promises.readFile(req.file.path, { encoding: "base64" });
+                uploadPhoto = `data:${req.file.mimetype};base64,${base64}`;
+                await fs.promises.unlink(req.file.path);
 
+                const data = await questionmodel.create({
+                    qname:req.body.qname,
+                    answer:req.body.answer,
+                    photo:uploadPhoto,
+                    cname:req.body.cname,
+                    tagname:req.body.tagname,
+                    level:req.body.level,
+                });
+                res.status(201).json({message:"Question successfully posted",data:data});
+            }
+            else{
+                console.log(req.file)
+                res.status(404).send("File is not uploaded");
+            }
         }
         catch(err){
-            console.log(err)
+            // console.log(err);
             next(new CustomError(err.message, 500, "Unable to add Question"));
         }
     },

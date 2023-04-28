@@ -4,7 +4,7 @@ const auth = require('../middleware/auth.js');
 const router = express.Router();
 
 
-router.post('/comment',feedbackController.postFeedback);
+router.post('/comment/:id',feedbackController.postFeedback);
 router.get('/feedback',feedbackController.showfeedback);
 
 module.exports = router;

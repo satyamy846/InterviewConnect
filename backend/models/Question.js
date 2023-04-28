@@ -8,7 +8,8 @@ const collection = new mongoose.Schema({
         type:String
     },
     photo:{
-        type:String
+        data:Buffer,
+        contentType:String,
     },
     cname:{
         type: String,
