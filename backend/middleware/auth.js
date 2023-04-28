@@ -1,6 +1,6 @@
 const jwt = require('jsonwebtoken');
 const usermodel = require('../models/User');
-
+const SECRET_KEY = 'ABSCCSD';
 const auth = {
     async authenticate(req,res,next){
         try{
@@ -11,6 +11,7 @@ const auth = {
                 const user = jwt.verify(token,SECRET_KEY);
                 req.user = await usermodel.findById(user.id);
                 // req.userId = user.id;
+                next();
             }
             else{
                 return res.status(404).json({message:`Unauthorised user`});

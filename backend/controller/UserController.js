@@ -26,7 +26,7 @@ const userController = {
                 const token = await jwt.sign({email:result.email,id:req._id},SECRET_KEY,{expiresIn:'1h'});
                 
                 res.status(200).json({user:result,token:token});
-                console.log(result.email);
+                // console.log(result.email);
 
                 
             }
