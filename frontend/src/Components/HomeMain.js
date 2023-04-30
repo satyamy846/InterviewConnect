@@ -4,7 +4,7 @@ import Navbar from './Navbar'
 export default function HomeMain() {
   return (
     <div>
-        <Navbar/>
+        <Navbar disabled={true}/>
     </div>
   )
 }

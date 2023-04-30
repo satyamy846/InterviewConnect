@@ -8,6 +8,7 @@ export default function LoginPage() {
         <div className="container">
           <div className="col-left">
             <div className="login-text">
+            <h3><i>InterviewConnect</i></h3>
               <h2>Welcome Back</h2>
               <p>Create your account.<br />It's totally free.</p>
               <a className="btn" href="signup">Sign Up</a>

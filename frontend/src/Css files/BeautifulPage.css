@@ -35,3 +35,34 @@
 #inter{
     color: red;
 }
+
+
+
+
+
+
+
+@media screen and (max-width: 767px) {
+    .bPageCont{
+        height: 580px;
+        /* width: 400px; */
+        border: 2px solid black;
+        margin-top: 130px;
+        background-image: url('../../public/img/designbg1phone.png');
+        background-color: #424874;
+        border-radius: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+        color: white;
+    }
+    .bPagebox{
+        /* border: 2px solid red; */
+        width: 350px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    #box2{
+        font-size: 24px;
+
+    }
+  }

@@ -3,6 +3,7 @@ import React from 'react'
 export default function ReviewPage() {
     return (
         <>
+        <div id='reviewNav'></div>
             <div className="reviewHeading">Discover User Experiences</div>
             <div className='reviewPageCont'>
                 <div className="reviewBox">

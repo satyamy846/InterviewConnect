@@ -283,6 +283,15 @@ font-family: 'Belgrano';
     background-repeat: no-repeat;
     background-size: cover;
   }
+  #getStartHeadingbox{
+    /* border: 2px solid red; */
+    font-size: 30px;
+  }
+  .infoBox {
+    /* border: 1px solid #292524; */
+    margin-bottom: 50px;
+   
+  }
 }
 /* top page css end  >>>>>>>>>>>>>>>>>>>>>>>>*/
 

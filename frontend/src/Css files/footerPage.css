@@ -1,5 +1,6 @@
 .footerCon{
     margin-top: 60px;
+
 }
 
 
@@ -22,7 +23,7 @@
 footer{
     margin:0;
     overflow-x:hidden !important;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Armata';
 }
 
 footer a{
@@ -113,6 +114,21 @@ fieldset{
     border:1px solid var(--primary);
     background-color:var(--primary);
     color:var(--secondary);
+}
+
+.vivek section:nth-child(2){
+    /* border: 2px solid red; */
+    padding: 0px;
+    margin-top: -19px;
+
+}
+.satyam section:nth-child(2){
+    /* border: 2px solid red; */
+    padding: 0px;
+    margin-top: -19px;
+}
+#copy{
+    text-align: center !important;
 }
 
 @media (max-width:920px){

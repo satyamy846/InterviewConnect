@@ -49,3 +49,48 @@
 #reviewText,#personName{
     text-align: center;
 }
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 767px) {
+    .reviewBox{
+        /* background-image: url('../../public/img/review2jpg.jpg'); */
+        background-image: url('../../public/img/review2phone.png');
+        /* border: 1px solid black; */
+        height: 400px;
+        width: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .contentBox{
+        height: 260px;
+        width: 410px;
+        /* border: 2px solid red; */
+    }
+    .textBox{
+        height: 240px;
+        /* border: 2px solid black; */
+        width: 320px;
+        padding: 20px;
+        margin: auto;
+    }
+    .reviewHeading{
+        margin-top: 30px;
+        margin-bottom: 30px;
+        text-align: center;
+        font-size: 30px;
+        font-weight: 300;
+        padding: 10px;
+        font-family: 'Belgrano';
+    }
+  }
