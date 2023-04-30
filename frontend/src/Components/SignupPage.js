@@ -8,6 +8,7 @@ export default function SignupPage() {
         <div className="container">
           <div className="col-left">
             <div className="login-text">
+              <h3><i>InterviewConnect</i></h3>
               <h2>Welcome Back</h2>
               <p>Already have account.<br />It's totally free</p>
               <a className="btn" href="login">Login</a>
@@ -22,8 +23,16 @@ export default function SignupPage() {
                   <input type="text" placeholder="Username or Email" required />
                 </p>
                 <p>
+                  <label>Name<span>*</span></label>
+                  <input type="text" placeholder="Name" required />
+                </p>
+                <p>
                   <label>Password<span>*</span></label>
                   <input type="password" placeholder="Password" required />
+                </p>
+                <p>
+                  <label>Conform Password<span>*</span></label>
+                  <input type="password" placeholder="Conform Password" required />
                 </p>
                 <p>
                   <input type="submit" value="Sign Up" />

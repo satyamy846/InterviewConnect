@@ -7,11 +7,11 @@ export default function Subject({ handleValueSelect }) {
   return (
     <div id='subject'>
         <div className="topicCont">
-        <div className="topicName" onClick={() => handleClick("OS")}>Operating System</div>
-        <div className="topicName" onClick={() => handleClick("CN")}>Computer Network</div>
-        <div className="topicName">Oops</div>
-        <div className="topicName">Database</div>
-        <div className="topicName">Software Engineering</div>
+        <div className="topicName" onClick={() => handleClick("operating system")}>Operating System</div>
+        <div className="topicName" onClick={() => handleClick("Computer Network")}>Computer Network</div>
+        <div className="topicName" onClick={() => handleClick("oops")}>Oops</div>
+        <div className="topicName" onClick={() => handleClick("database")}>Database</div>
+        <div className="topicName" onClick={() => handleClick("software engineering")}>Software Engineering</div>
         {/* <div className="topicName">Nodejs</div>
         <div className="topicName">expressjs</div>
         <div className="topicName">MongoDB</div>

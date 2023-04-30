@@ -6,7 +6,7 @@ import QuestionPage from './QuestionPage';
 
 export default function QuesContPage() {
   const [activeLink, setActiveLink] = useState('webdev');
-  const [selectedValue, setSelectedValue] = useState('');
+  const [selectedValue, setSelectedValue] = useState('html');
 
   const handleLinkClick = (link) => {
     setActiveLink(link);

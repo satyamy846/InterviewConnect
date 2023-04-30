@@ -10,7 +10,7 @@ export default function TopPage() {
           <div class="divider"><span></span><span>InterviewConnect</span><span></span></div>
           <div id="content">Your one-stop destination for acing your next software developer interview!
             With our comprehensive content and topic-wise
-            interview questions on HTML, CSS, JavaScript, Node.js, React.js, Vue.js, MongoDB, and more,
+            interview questions on <b><i>Web Development</i></b> , <b><i>Data Structure and algorithm </i></b>, <b><i>Core Subjects</i></b> and more,
             you'll be well-prepared to showcase your skills and land your dream job.
           </div>
           <div id="getstartedBtn">
